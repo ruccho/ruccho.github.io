@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上記の３ meta タグは必ず頭に配置する。; 他の head コンテンツはこれ以下に記述する。 -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="canonical" href="http://ruccho.github.io/cir/gateway.html">
+    <meta property="og:url" content="http://ruccho.github.io/cir/gateway.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="回転パズル Cir" />
+    <meta property="og:description" content="ここからプレイできます。" />
+    <meta property="og:image" content="http://ruccho.github.io/images/cir_logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ruccho_presents" />
+    <meta name="twitter:title" content="回転パズル Cir" />
+    <meta name="twitter:description" content="ここからプレイ！" />
+    <meta name="twitter:image" content="http://ruccho.github.io/images/cir_logo.png" />
+
+    <title>回転パズル Cirの遊び方</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <style type="text/css">
+        #topvision {
+            background-image: url("../images/cir_development.jpg");
+            background-size: cover;
+            background-position: center 60%;
+            text-shadow: #000000 0 0 10px;
+            color: #ffffff;
+            font-weight: bolder;
+            height: 100%;
+            padding: 30px 15px;
+            margin-bottom: 30px;
+        }
+        
+        #topvision .h1,
+        #topvision h1 {
+            color: inherit
+        }
+        
+        #topvision p {
+            margin-bottom: 15px;
+            font-size: 21px;
+            font-weight: 200
+        }
+        
+        #topvision > hr {
+            border-top-color: #d5d5d5
+        }
+        
+        #topvision .container {
+            padding-top: 50px;
+            max-width: 100%;
+        }
+        
+        p {
+            font-size: 21px;
+        }
+        
+        .row image {
+            margin-top: 5px;
+            /* 画像の上の余白*/
+            display: inline-block;
+            box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="../index.html" class="navbar-brand">るっちょ ぷれぜんつ</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html">トップ </a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">作品 <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="index.html">回転パズル Cir</a></li>
+                                <li><a href="../ssy/index.html" class="active">スーパースモールゆでたかし</a></li>
+                                <li><a href="../kf2d/index.html">けものフレンズ2D</a></li>
+                                <li><a href="../yoko/index.html">オンライン格闘 Yoko</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.youtube.com/channel/UCX2VDAmh9XBb1A-FHk8TfNQ" target="_blank">Youtubeチャンネル </a></li>
+                        <li><a href="https://twitter.com/ruccho_vector" target="_blank">Twitter </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Cirトップ</a></li>
+                        <li><a href="#">遊び方</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    <div class="jumbotron" id="topvision" style="padding-top: 200px;padding-bottom: 200px;">
+        <div class="container">
+            <h1>How to Play Cir</h1>
+            <p></p>
+        </div>
+    </div>
+    <div class="container">
+
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#start">はじめかた</a></li>
+            <li><a href="#play">プレイ中の操作</a></li>
+            <li><a href="#local">ローカルモード</a></li>
+            <li><a href="#online">オンラインモード</a></li>
+        </ul>
+
+        <div class="page-header" id="start">
+            <h1>1. はじめかた <small></small></h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-5 col-lg-6">
+                <h2>タイトル画面</h2>
+                <p>「START」ボタンを押して始めましょう。「HOWTO」でこのページへ飛ぶことができるので、操作を知りたいときはいつでも見られます。</p>
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-6">
+                <img src="../images/cir_1.png" class="img-responsive">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-5 col-lg-6">
+                <h2>モードセレクト画面</h2>
+                <p><b>・ローカルモード</b><br>あらかじめ内蔵されたステージで遊ぶことができます。</p>
+                <p><b>・オンラインモード</b><br>誰かが作ったステージで遊んだり、自分でオリジナルのステージをつくって投稿したりすることができます。</p>
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-6">
+                <img src="../images/cir_2.png" class="img-responsive">
+            </div>
+        </div>
+        <div class="page-header" id="play">
+            <h1>2. プレイ中の操作 <small></small></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div style="object-fit: contain;">
+                    <img src="../images/cir_playing.png" class="img-responsive">
+                </div>
+            </div>
+        </div>
+        <div class="page-header" id="local">
+            <h1>3. ローカルモード <small></small></h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-5 col-lg-6">
+                <h2>ローカルステージセレクト</h2>
+                <p>全12のステージで遊ぶことができます。はじめは第１ステージしか選択できませんが、クリアすれば次のステージがアンロックされます。</p>
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-6">
+                <img src="../images/cir_3.png" class="img-responsive">
+            </div>
+        </div>
+        <div class="page-header" id="online">
+            <h1>3. オンラインモード <small></small></h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-5 col-lg-6">
+                <h2>オンラインモードメニュー</h2>
+                <p><b>・ステージ検索</b><br>Twitterに投稿されたステージを検索できます。</p>
+                <p><b>・ステージコード</b><br>URLやステージコードを直接入力してステージをプレイできます。</p>
+                <p><b>・クリエイト</b><br>オリジナルのステージを作成してTwitter他各種SNSに投稿できます。</p>
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-6">
+                <img src="../images/cir_5.png" class="img-responsive">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-5 col-lg-6">
+                <h2>ステージ検索</h2>
+                <p>
+                    Twitterに投稿されたステージが一覧表示されます。（最大20件）<br> 画面には、アイコン、Twitterユーザー名、タイトル、いいねの数が表示され、項目をクリックすると詳細が表示され、プレイなどが行えます。
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-6">
+                <img src="../images/cir_6.png" class="img-responsive">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                <h2>ステージクリエイト</h2>
+                <p>
+                    「はじめから」では新しくステージを作成することができます。編集中のステージはリアルタイムで保存され、編集を中断しても「よみこむ」から読み込むことができます。</p>
+                </p>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                <img src="../images/cir_8.png" class="img-responsive">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                <img src="../images/cir_7.png" class="img-responsive">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <img src="../images/cir_creation.png" class="img-responsive">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <h2>メニュー</h2>
+                <p>
+                    <b>「ステージ情報を編集する」</b>では、ステージのタイトルや説明文、規定回転回数などを設定できます。<b>「URL化
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <img src="../images/cir_10.png" class="img-responsive">
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+body {
+    background-color: rgba(10, 18, 46);
+    color: rgb(235, 230, 207);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.drawer-hamburger-icon,
+.drawer-hamburger-icon::after,
+.drawer-hamburger-icon::before {
+    background-color: rgb(235, 230, 207);
+}
+
+.mainvision-container {
+    margin: 0;
+    padding: 100px, 100px;
+}
+
+.main {
+    image-rendering: pixelated;
+    background-image: url("../images/nkn-croped.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.mainvision-container .container {
+    height: 90vh;
+    padding-top: 40vh;
+}
+
+.mainvision-container .container img {
+    image-rendering: crisp-edges;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.scroll-icon {
+    padding-top: 60px;
+}
+
+.scroll-icon span {
+    position: absolute;
+    bottom: 20vh;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 1.5s infinite;
+    animation: sdb 1.5s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
+@keyframes sdb {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
+.title {
+    background-color: rgba(10, 18, 46);
+}
+
+.works-container {
+    image-rendering: initial;
+    padding-top: 100px;
+    background-color: rgba(10, 18, 46, 0.8);
+    margin-bottom: 0;
+}
+
+.works-container .container {
+    margin-bottom: 0;
+}
+
+.user-icon {
+    width: 100px;
+    float: left;
+    margin-right: 30px;
+}
+
+.about-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.works-year .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+    opacity: 0;
+}
+
+.s__ease0 {
+    transition: all .3s ease-out;
+}
+
+.s__ease1 {
+    transition: all 1.2s cubic-bezier(.08, .82, .17, 1);
+}
+
+.s_fade.delighter {
+    opacity: 0;
+}
+
+.s_fade.delighter.started.ended {
+    opacity: 1;
+}
+
+.s_up.delighter {
+    transform: translateY(50px);
+}
+
+.s_up.delighter.started.ended {
+    transform: translateY(0px);
+}
+
+.s_right.delighter {
+    transform: translateX(50px);
+}
+
+.s_right.delighter.started.ended {
+    transform: translateY(0px);
+}
+
+.works-year .col-sm-6 {
+    padding: 10px 20px;
+}
+
+.works-year-label {
+    margin: 20px auto;
+    width: 100px;
+    text-align: center;
+    font-size: 32m;
+    background-color: rgb(235, 230, 207);
+    color: rgb(10, 18, 46);
+    font-weight: 100;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上記の３ meta タグは必ず頭に配置する。; 他の head コンテンツはこれ以下に記述する。 -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="canonical" href="http://ruccho.github.io/cir/gateway.html">
+    <meta property="og:url"           content="http://ruccho.github.io/cir/gateway.html" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="回転パズル Cir" />
+	<meta property="og:description"   content="ここからプレイできます。" />
+	<meta property="og:image"         content="http://ruccho.github.io/images/cir_logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ruccho_presents" />
+    <meta name="twitter:title" content="回転パズル Cir" />
+    <meta name="twitter:description" content="ここからプレイ！" />
+    <meta name="twitter:image" content="http://ruccho.github.io/images/cir_logo.png" />
+
+    <title>るっちょ　ぷれぜんつ</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
+     <script>
+        $(function () {
+          var clipboard = new Clipboard('.btn');
+        });
+    </script>
+
+</head>
+
+<body style="padding-top:50px;">
+    <div style="width: 0; height: 0; overflow: hidden;">
+        <iframe id="launch_frame" name="launch_frame"> </iframe>
+    </div>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">回転パズル Cir</h3>
+            </div>
+            <div class="panel-body">
+                <script type="text/javascript" src="gateway.js"></script>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

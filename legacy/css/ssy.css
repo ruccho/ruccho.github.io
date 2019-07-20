@@ -1,0 +1,54 @@
+#topvision {
+    background-image: url("../images/ssy_play_1.png");
+    background-size: cover;
+    background-position: center 60%;
+    text-shadow: #000000 0 0 10px;
+    color: #ffffff;
+    font-weight: bolder;
+    height: 100%;
+    padding: 30px 15px;
+    margin-bottom: 30px;
+    }
+
+#topvision .h1, #topvision h1 {
+    color: inherit
+}
+
+#topvision p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200
+}
+
+#topvision > hr {
+    border-top-color: #d5d5d5
+}
+
+#topvision .container {
+    padding-top: 50px;
+    max-width: 100%;
+}
+
+@media screen and (min-width:768px) {
+    #topvision {padding: 48px 0;}
+
+    #topvision .h1, #vision h1 {
+        font-size: 63px;
+    }
+}
+
+#vision1{
+    background-image: url("../images/ssy_photo_1.jpg");
+    background-size: cover;
+    background-position: center 60%;
+    text-shadow: #000000 0 0 5px;
+    color: #ffffff;
+}
+
+.navbar{
+    opacity: 0.75;
+}
+
+#versions{
+    overflow: scroll;
+}
