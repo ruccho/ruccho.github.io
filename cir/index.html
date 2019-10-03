@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>redirecting...</title>
+</head>
+
+<body onload="javascript:redirect()">
+
+    <script type="text/javascript">
+        function redirect() {
+            var query = window.location.search;
+            location.replace("./../legacy/cir/index.html" + query);
+        }
+    </script>
+</body>
+
+</html>
