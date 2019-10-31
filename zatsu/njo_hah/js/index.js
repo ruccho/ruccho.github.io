@@ -187,6 +187,6 @@ function convert() {
         }
     }
     document.getElementById("converted").value = s_o;
-    document.getElementById("tweet-button").setAttribute("href", "https://twitter.com/intent/tweet?text=" + encodeURI("「" + s + "」を「" + s_o + "」に変換しました！ https://ruccho.github.io/zatsu/njo_hah") + "&button_hashtag=ンョ゛ハー゛ジェネレーター&ref_src=twsrc%5Etfw");
+    document.getElementById("tweet-button").setAttribute("href", "https://twitter.com/intent/tweet?text=" + encodeURI("「" + s + "」を「" + s_o + "」に変換しました！") + "&url=https%3A%2F%2Fruccho.github.io%2Fzatsu%2Fnjo_hah&button_hashtag=ンョ゛ハー゛ジェネレーター&ref_src=twsrc%5Etfw");
 
 }
