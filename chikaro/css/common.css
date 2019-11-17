@@ -1,0 +1,441 @@
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background: url("../images/Koujo_adjusted_nologo.png") left no-repeat;
+    background-size: cover;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    color: rgb(255, 245, 217);
+    //font-family: "Sawarabi Mincho";
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", YuGothic, "Yu Gothic", Verdana, Meiryo, sans-serif;
+}
+
+a,
+a:hover {
+    color: rgb(255, 245, 217);
+    text-decoration: none;
+}
+
+.progress {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.progress .progress-content {
+    display: table-cell;
+    margin: auto;
+    //height: 200px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.progress .progress-content .progress-bar {
+    width: 200px;
+    height: 1px;
+    margin: 10px auto;
+}
+
+.progress .progress-content .progress-bar-inner {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 245, 217);
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    position: fixed;
+    transition-duration: 0.2s;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
+
+.menu-container {
+    position: absolute;
+    transition-duration: 0.2s;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+    text-shadow: 1px 1px 2px #000;
+    width: 300px;
+}
+
+.menu .menu-list {
+    list-style: none;
+    transition: all .2s;
+}
+
+.menu .menu-list.active {
+    opacity: 1.0;
+    visibility: visible;
+    padding-left: 40px;
+}
+
+@media screen and (max-width:1000px) {
+    /*　スマホ　*/
+    .menu {
+        background-color: rgba(0, 0, 0, 0.0);
+        visibility: hidden;
+    }
+    .menu.active {
+        background-color: rgba(0, 0, 0, 0.7);
+        visibility: visible;
+    }
+    .menu-container {
+        top: 50px;
+    }
+    .menu-trigger {
+        visibility: visible;
+    }
+    .menu .menu-list {
+        visibility: hidden;
+        opacity: 0.0;
+        padding-left: 80px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    /*　PC　*/
+    .menu-container {
+        bottom: 100px;
+        left: 50px;
+    }
+    .menu-trigger {
+        visibility: hidden;
+    }
+    .menu .menu-list {
+        visibility: visible;
+        opacity: 1.0;
+    }
+}
+
+.menu .menu-list .menu-toplogo img {
+    width: 150px;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.menu .menu-list .menu-toplogo img {
+    width: 150px;
+}
+
+.menu .menu-list .menu-item {
+    display: block;
+    border-bottom: 1px solid rgb(255, 245, 217);
+    padding: 1px 10px;
+    margin: 10px 0;
+    transition: all 0.2s;
+    border-left: 5px solid rgba(0, 225, 255, 0.0);
+    text-shadow: 1px 1px 5px #000;
+}
+
+.menu .menu-list .menu-item.menu-item-selected {
+    padding: 1px 20px;
+    border-bottom-color: rgb(19, 202, 226);
+}
+
+.menu .menu-list .menu-item:hover {
+    padding: 1px 20px;
+    color: #000;
+    background-color: rgb(255, 245, 217);
+    border-left: 5px solid rgb(19, 202, 226);
+    text-shadow: none;
+}
+
+.menu-trigger,
+.menu-trigger span {
+    display: inline-block;
+    transition: all .2s;
+    box-sizing: border-box;
+}
+
+.menu-trigger {
+    position: relative;
+    left: 50px;
+    margin-bottom: 10px;
+    width: 30px;
+    height: 22px;
+}
+
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 245, 217);
+    border-radius: 1px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+    top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+    top: 10px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+    transform: translateY(10px) rotate(-45deg);
+}
+
+.menu-trigger.active span:nth-of-type(2) {
+    left: 50%;
+    opacity: 0;
+    -webkit-animation: active-menu-bar02 .8s forwards;
+    animation: active-menu-bar02 .8s forwards;
+}
+
+@-webkit-keyframes active-menu-bar02 {
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes active-menu-bar02 {
+    100% {
+        height: 0;
+    }
+}
+
+.menu-trigger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-10px) rotate(45deg);
+    transform: translateY(-10px) rotate(45deg);
+}
+
+.section {
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .5s;
+}
+
+.section.inactive {
+    position: fixed;
+    opacity: 0;
+    height: 0;
+    overflow-y: hidden;
+}
+
+.section.active {
+    min-height: 100vh;
+    position: absolute;
+    opacity: 1;
+    height: auto;
+}
+
+.story {}
+
+@media screen and (max-width:1000px) {
+    /*　スマホ　*/
+    .section .section-content {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    /*　PC　*/
+    .section .section-content {
+        padding-left: 500px;
+        padding-right: 50px;
+    }
+}
+
+.section .section-content {
+    max-width: 1280px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.section .section-heading {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2.5em;
+    font-weight: 900;
+    letter-spacing: 0.4em;
+    background-color: rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+}
+
+@media screen and (max-width:500px) {
+    /*　スマホ　*/
+    .section .section-heading {
+        padding-left: 50px;
+        font-size: 1.5em;
+        letter-spacing: 0.2em;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:1000px) {
+    /*　スマホ　*/
+    .section .section-heading {
+        padding-left: 50px;
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    /*　PC　*/
+    .section .section-heading {
+        padding-left: 500px;
+    }
+}
+
+.section .section-content p {
+    margin: 30px 10px;
+    line-height: 2em;
+    font-size: 1.1em;
+    font-weight: 900;
+    max-width: 800px;
+}
+
+.section .section-content p #text {
+    color: #000;
+    background-color: rgb(255, 245, 217);
+}
+
+.section .section-vision {
+    display: table;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    margin: 0 100px 0 0;
+    overflow-x: hidden;
+}
+
+.section .section-vision-general {
+    background: url("") center no-repeat;
+}
+
+.story-vision0 {
+    background: url("../images/w0.png") center no-repeat;
+}
+
+.story-vision1 {
+    background: url("../images/w1.png") center no-repeat;
+}
+
+.story-vision2 {
+    background: url("../images/w3.png") center no-repeat;
+}
+
+.chara .chara-heading {
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    font-weight: 900;
+    font-size: 5em;
+}
+
+.chara .section-content {
+    padding-top: 50px;
+}
+
+.chara-vision0 {
+    background: url("../images/yokaze1.png") center no-repeat;
+}
+
+.chara-vision1 {
+    background: url("../images/sigmo1.png") left no-repeat;
+}
+
+.chara .section-vision {
+    height: 400px;
+}
+
+.main {
+    min-height: 100vh;
+}
+
+.main .container {
+    padding-top: 20px;
+}
+
+.main .main-mainvision {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.main .main-mainvision img {
+    width: 100%;
+}
+
+.main .carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    height: auto;
+    padding: 0;
+}
+
+.main .carousel-caption p {
+    display: inline;
+    background-color: rgb(255, 245, 217);
+    line-height: 0;
+    font-size: 80%;
+    text-align: center;
+    color: #000;
+}
+
+@media screen and (max-width:500px) {
+    /*　スマホ　*/
+    .main .carousel-caption p {
+        font-size: 60%;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:1000px) {
+    /*　スマホ　*/
+    .main .carousel-caption p {
+        font-size: 80%;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    /*　PC　*/
+    .main .carousel-caption p {
+        font-size: 80%;
+    }
+}
+
+.main h2 {
+    //border-bottom: 1px solid rgb(255, 245, 217);
+}
+
+.video {}
+
+.table {
+    color: rgb(255, 245, 217);
+}
+
+.main p .textlink {
+    border-bottom: dotted 1px rgb(19, 202, 226);
+}
+
+#brandlogo {
+    text-align: center;
+}
