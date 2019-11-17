@@ -439,3 +439,8 @@ a:hover {
 #brandlogo {
     text-align: center;
 }
+
+#brandlogo img {
+    width: 320px;
+    max-width: 100%;
+}
