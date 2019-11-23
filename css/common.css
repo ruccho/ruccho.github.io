@@ -186,3 +186,7 @@ a:hover {
     text-decoration: none;
     color: inherit;
 }
+
+.table {
+    color: rgb(255, 245, 217);
+}

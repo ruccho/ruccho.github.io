@@ -12,6 +12,8 @@ $(function() {
         "video",
         "dl"
     ]
+    var hash = location.hash;
+    activateSection(hash.substr(1));
 
     $('.menu .menu-item-main').on('click', function() {
         activateSection('main');
