@@ -432,7 +432,7 @@ a:hover {
     color: rgb(255, 245, 217);
 }
 
-.main p .textlink {
+.main .textlink {
     border-bottom: dotted 1px rgb(19, 202, 226);
 }
 
