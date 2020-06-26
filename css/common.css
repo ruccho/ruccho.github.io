@@ -15,6 +15,13 @@ body {
     padding: 100px, 100px;
 }
 
+.mainvision-logo
+{
+    image-rendering: pixelated;
+    width: 210px;
+    filter: drop-shadow(0 0 10px black);
+}
+
 main::before {
     content: "";
     display: block;
@@ -38,7 +45,7 @@ main::before {
     padding-top: 40vh;
 }
 
-.mainvision-container .container img {
+.mainvision-logo {
     image-rendering: crisp-edges;
     max-width: 100%;
     margin: 0 auto;
@@ -110,8 +117,9 @@ main::before {
 
 .user-icon {
     width: 100px;
-    float: left;
+    //float: left;
     margin-right: 30px;
+    margin-bottom: 20px;
 }
 
 .about-container {
@@ -188,5 +196,56 @@ a:hover {
 }
 
 .table {
+    color: rgb(255, 245, 217);
+}
+
+.links
+{
+    display: block;
+    margin: 100px auto;
+}
+
+.links ul{
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.links ul li{
+    padding: 0 15px;
+    display: inline-block;
+    text-align: center;
+    font-size: 2em;
+    background-color: transparent;
+    transition: all .3s cubic-bezier(0, 0.64, 0.31, 0.99);
+}
+
+.links ul li i{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.links ul li img{
+    display: inline-block;
+    width: 32px;
+    image-rendering: initial;
+    margin-top: 0;
+    vertical-align: middle;
+}
+
+
+.links ul li:hover{
+    padding: 0 30px;
+    border-bottom: solid 1px rgb(255, 245, 217);
+}
+
+.link-label
+{
+    font-size: 0.4em;
+    line-height: 5px;
+    color: rgba(255, 245, 217, 0);
+}
+
+.links ul li:hover .link-label{
     color: rgb(255, 245, 217);
 }
