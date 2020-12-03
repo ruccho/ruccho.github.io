@@ -25,7 +25,7 @@
     <div class="top-movie-container">
         <div id="top-movie"></div>
     </div>
-    
+
     <div class="progress">
         <div class="progress-content">
             <img src="">
@@ -203,6 +203,7 @@
         </div>
         <div class="section-content container">
             <p>
+                <span id="text">開発中</span>
                 <span id="text">　ジャンル：</span><br> 幽体離脱2Dアクションゲーム<br><br>
                 <span id="text">　対応プラットフォーム：</span><br> PC<br><br>
                 <br>
@@ -321,6 +322,14 @@
             <p>
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" width="560" height="315"
+                    src="https://www.youtube.com/embed/itrnEh6zNCk" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            </p>
+            <p>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" width="560" height="315"
                     src="https://www.youtube.com/embed/rsu6_cC6s0E" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
@@ -383,7 +392,7 @@
 
         // 3. This function creates an <iframe> (and YouTube player)
         //    after the API code downloads.
-        var ytid = 'rsu6_cC6s0E';
+        var ytid = 'itrnEh6zNCk';
         var player;
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('top-movie', {
