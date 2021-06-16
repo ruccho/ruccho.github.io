@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>時空運送であそぶ</title>
+    <meta name="twitter:card" content="時空運送であそぶ" />
+    <meta name="twitter:creator" content="@ruccho_vector" />
+    <meta property="og:url" content="https://ruccho.github.io/qtp/play" />
+    <meta property="og:title" content="時空運送であそぶ" />
+    <meta property="og:description"
+        content="時空を超える、荷運びパズル" />
+    <meta property="og:image"
+        content="https://ruccho.github.io/qtp/images/feature_p0_r0.png" />
+    <style type="text/css">
+        body {
+            background-color: #ffb400;
+            color: #fffceb;
+            width: 100vw;
+            max-width: 360px;
+            margin: 0;
+            padding: 0 auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .text-link {
+            background-color: #ff8a00;
+            color: #fffceb;
+            text-decoration: none;
+        }
+
+        .badge-play {
+            width: 100%;
+            max-width: 80%;
+        }
+
+        .container-logo {
+            margin: 50px 0;
+        }
+
+        .image-logo {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-logo">
+        <img class="image-logo" src="../images/logo.png">
+    </div>
+    <div id="container-mobile">
+        アプリが開かないときは<a class="text-link" id="link-open-app">こちら</a>
+    </div>
+    <div id="container-unsupported">
+        このプラットフォームはサポート対象外です。
+    </div>
+    <div>
+
+        <a href='https://play.google.com/store/apps/details?id=io.github.ruccho.qtransport&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+            target="_blank">
+            <img class="badge-play" alt='Google Play で手に入れよう'
+                src='https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png' />
+        </a>
+    </div>
+
+
+    <script type="text/javascript">
+
+        //parse url
+
+        const query = location.search;
+
+        var userAgent = navigator.userAgent.toLowerCase();
+
+        const isAndroid = userAgent.includes('Android');
+
+        let intentUrl = "";
+        if (isAndroid) {
+            intentUrl = `qtransport://play${query}`;
+        }
+
+        document.getElementById('container-mobile').style.display = intentUrl ? 'initial' : 'none';
+        document.getElementById('container-unsupported').style.display = !intentUrl ? 'initial' : 'none';
+
+        if (intentUrl) {
+            document.getElementById('link-open-app').setAttribute('href', intentUrl);
+            location.href = intentUrl;
+        }
+    </script>
+</body>
+
+</html>
